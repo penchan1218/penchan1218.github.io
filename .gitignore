@@ -1,2 +1,4 @@
 #忽略_site文件夹
-_site/
+_site
+#忽略.jekyll-metadata文件
+/.jekyll-metadata
