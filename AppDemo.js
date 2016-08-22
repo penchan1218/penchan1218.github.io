@@ -26,16 +26,22 @@ var myApp = new Framework7({
   }
 });
 
-var $$ = Framework7.$;
-
 var mainView = myApp.addView('.view-main', {
   dynamicNavbar: true
 });
+
+var $$ = Framework7.$;
 
 $$(document).on('pageInit', function (e) {
   var page = e.detail.page;
 
   if (page.name === 'about') {
     myApp.alert('Here comes about page');
+  }
+
+  if (page.name !== 'index') {
+    mainView.hideToolbar();
+  } else {
+    mainView.showToolbar();
   }
 });
